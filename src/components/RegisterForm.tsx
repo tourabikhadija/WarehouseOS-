@@ -54,14 +54,14 @@ export default function RegisterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-6">
+    <form onSubmit={handleSubmit} className="form-register">
 
-      <h1 className="text-2xl font-bold text-center">
+      <h1>
         Créer un compte
       </h1>
 
       {error && (
-        <p className="text-red-500">{error}</p>
+        <p>{error}</p>
       )}
 
       <input
@@ -70,7 +70,7 @@ export default function RegisterForm() {
         placeholder="Nom complet"
         value={formData.name}
         onChange={handleChange}
-        className="w-full border rounded p-2"
+        
       />
 
       <input
@@ -79,7 +79,6 @@ export default function RegisterForm() {
         placeholder="Adresse email"
         value={formData.email}
         onChange={handleChange}
-        className="w-full border rounded p-2"
       />
 
       <input
@@ -88,7 +87,7 @@ export default function RegisterForm() {
         placeholder="Mot de passe"
         value={formData.password}
         onChange={handleChange}
-        className="w-full border rounded p-2"
+        
       />
 
       <input
@@ -97,13 +96,12 @@ export default function RegisterForm() {
         placeholder="Confirmer le mot de passe"
         value={formData.confirmPassword}
         onChange={handleChange}
-        className="w-full border rounded p-2"
+        
       />
 
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-blue-600 text-white rounded p-2"
       >
         {loading ? "Inscription..." : "S'inscrire"}
       </button>
