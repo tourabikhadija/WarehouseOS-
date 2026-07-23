@@ -1,0 +1,13 @@
+h1{
+    color: #fff;
+    font-size: 40px;
+    margin-top: 32px;
+    margin-left: 23 px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
